@@ -1,5 +1,11 @@
 from collections import deque
 
+def inputEdges(edges):
+    no_of_edges = int(input("No. of edges : "))
+
+    for _ in range(no_of_edges):
+        edges.append(list(map(int, input().split())))
+
 def createGraph(graph, edges, n):
 
     for i in range(1, n+1):
@@ -11,7 +17,7 @@ def createGraph(graph, edges, n):
 def printBFS(graph, n):
     
     visited = [False] * (n+1)
-    queue = list()
+    queue = deque()
 
     visited[1] = True
     queue.append(1)
@@ -19,10 +25,12 @@ def printBFS(graph, n):
     result = list()
 
     while(len(queue) > 0):
-        currNode = queue.pop(0)
+
+        currNode = queue.popleft()
         result.append(currNode)
         
         for adj in graph[currNode]:
+
             if(visited[adj] == False):
                 visited[adj] = True
                 queue.append(adj)
@@ -32,13 +40,20 @@ def printBFS(graph, n):
 
     
 if __name__ == "__main__":
-    n = 8
-    edges = [[1,2], [1,3], [2, 4], [2, 5], [3, 8], [5, 6], [6, 7]]
+
+    n = int(input("No. of nodes : "))
+    edges = list()
+    inputEdges(edges)
+    print(edges)
+    # example : len = 7, edges = [[1,2], [1,3], [2, 4], [2, 5], [3, 8], [5, 6], [6, 7]]
+
     graph = dict()
 
     createGraph(graph, edges, n)
+    print(graph)
 
     result = printBFS(graph, n)
 
+    print()
     print(result)
 
