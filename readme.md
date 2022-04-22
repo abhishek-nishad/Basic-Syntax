@@ -9,7 +9,7 @@
 
 Authors:
 
-1. Abhishek Nishads
+1. Abhishek Nishad
 2. Ishan Rajendra
 3. Aman Verma
 4. Ajay Kumar
