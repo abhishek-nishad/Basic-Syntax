@@ -1,6 +1,0 @@
-
-    Collections.swap(list-name, index1, index2);
-    Collections.reverse(list-name);
-    Collections.sort(list-name);
-
-    
