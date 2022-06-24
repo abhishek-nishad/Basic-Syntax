@@ -1,0 +1,6 @@
+
+Create an integer array from an input stream :
+ 
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    String s = br.readLine();
+    Integer[] temp = Stream.of(s).map(Integer::valueOf).toArray(Integer[]::new);
