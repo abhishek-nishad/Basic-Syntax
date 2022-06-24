@@ -1,7 +1,7 @@
 import java.util.*; 
 public class QuickSort 
 {
-    private static void swap(int[] arr, int i, int j)
+    private void swap(int[] arr, int i, int j)
     {
         int t = arr[i]; 
         arr[i] = arr[j]; 
