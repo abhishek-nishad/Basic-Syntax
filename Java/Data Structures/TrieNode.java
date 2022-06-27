@@ -1,13 +1,13 @@
 import java.util.Arrays;
 public class TrieNode 
 {
-    int alphabets[]; 
+    TrieNode[] alphabets; 
     boolean endOfWord; 
     
     TrieNode()
     {
-        this.alphabets = new int[27]; 
+        this.alphabets = new TrieNode[26]; 
         this.endOfWord = false; 
-        Arrays.fill(alphabets, 0);
+        Arrays.fill(alphabets, null);
     }
 }
