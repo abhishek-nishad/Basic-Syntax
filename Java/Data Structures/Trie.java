@@ -27,7 +27,7 @@ public class Trie
         currNode.endOfWord = true;
     }
 
-    public void display(TrieNode root, char str[], int level, ArrayList<String> result)
+    private void display(TrieNode root, char str[], int level, ArrayList<String> result)
     {
         if (root.endOfWord != false) 
         {
