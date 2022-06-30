@@ -71,7 +71,7 @@ public class LinkedList
             head = tail = null; 
             return value;
         }
-        
+
         ListNode curr = head; 
         if(head == tail)
         
@@ -171,6 +171,5 @@ public class LinkedList
                     System.out.println("INVALID INPUT");            
             }
         }   
-        // ob.close();
     }
 }
