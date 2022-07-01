@@ -27,9 +27,7 @@ public class Stack
             return -1; 
 
         int value = tos.data;
-        ListNode curr = tos; 
-        tos = tos.next; 
-        curr = null; 
+        tos = tos.next;
         return value; 
     }
     private int peek()
