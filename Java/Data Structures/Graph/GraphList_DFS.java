@@ -36,11 +36,8 @@ public class GraphList_DFS
             graph.get(temp[0]).add(temp[1]); 
     }
 
-    private void getDFS(int n, int node)
+    private void getDFS(int n, int node, boolean visited[])
     {
-        boolean visited[] = new boolean[n+1];
-        Arrays.fill(visited, false);
-
         visited[node] = true; 
         result.add(node);
 
@@ -48,7 +45,7 @@ public class GraphList_DFS
         {
             if(!visited[adj])
             {
-                getDFS(n, adj);
+                getDFS(n, adj, visited);
             }
         }
     }
@@ -64,13 +61,37 @@ public class GraphList_DFS
         int n = ob.nextInt();
         GraphList_DFS dfs = new GraphList_DFS(n);
 
-        //  example : len = 7, edges = [[1,2], [1,3], [2, 4], [2, 5], [3, 8], [5, 6], [6, 7]]
         dfs.inputEdges();
         dfs.createGraph();
 
         System.out.print("Input Source : ");
         int source = ob.nextInt(); 
-        dfs.getDFS(n, source);
+
+        boolean visited[] = new boolean[n+1];
+        Arrays.fill(visited, false);
+        dfs.getDFS(n, source, visited);
+
         dfs.displayResult();
     }
 }
+
+
+/*
+  
+  example 
+  len :  8
+  edges : 
+  [
+        1 2
+        1 3
+        2 4 
+        2 5
+        3 6
+        5 7
+        7 8
+        6 8
+ * ]
+ */
+
+
+// result : [1 2 4 5 7 8 3 6]

@@ -57,9 +57,6 @@ public class GraphMatrix_BFS
         gm.inputMatrix(matrix, no_of_nodes);
         result = gm.getBFS(matrix, no_of_nodes);
         System.out.println(result);
-
-
-        
     }
 }
 
