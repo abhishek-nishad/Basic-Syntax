@@ -3,25 +3,30 @@ import java.util.*;
 public class GraphMatrix_BFS
 {
     static Scanner ob = new Scanner(System.in);
+    int matrix[][];
+    ArrayList<Integer> result;
 
-    private void inputMatrix(int matrix[][], int nodes)
+    GraphMatrix_BFS(int n)
     {
-        for(int i=0; i<nodes; i++)
+        matrix = new int[n+1][n+1];
+        result = new ArrayList<>();
+    }
+
+    private void inputMatrix(int nodes)
+    {
+        for(int i=0; i <= nodes; i++)
         {
-            for(int j=0; j<nodes; j++)
+            for(int j=0; j <= nodes; j++)
             {
                 matrix[i][j] = ob.nextInt();
             }
         }
     }
 
-    private ArrayList<Integer> getBFS(int matrix[][], int nodes)
+    private void getBFS(int nodes)
     {
         boolean visited[] = new boolean[nodes];
         Arrays.fill(visited, false);
-        System.out.println(nodes);
-
-        ArrayList<Integer> result = new ArrayList<>();
         Queue<Integer> queue = new LinkedList<>();
 
         queue.add(0);
@@ -42,22 +47,23 @@ public class GraphMatrix_BFS
 
             }
         }
-        return result;
+    }
+
+    private void displayResult()
+    {
+        System.out.println(result);
     }
     public static void main(String[] args) 
     {
         System.out.print("No. of nodes : ");
-        int no_of_nodes = ob.nextInt();
+        int n = ob.nextInt();
 
-        int matrix[][] = new int[no_of_nodes][no_of_nodes];
-        ArrayList<Integer> result = new ArrayList<>();
+        GraphMatrix_BFS bfs = new GraphMatrix_BFS(n);
 
-        GraphMatrix_BFS gm = new GraphMatrix_BFS();
+        bfs.inputMatrix(n);
+        bfs.getBFS(n);
 
-        gm.inputMatrix(matrix, no_of_nodes);
-        result = gm.getBFS(matrix, no_of_nodes);
-
-        System.out.println(result);
+        bfs.displayResult();
     }
 }
 
