@@ -47,6 +47,7 @@ public class GraphMatrix_BFS
 
             }
         }
+        
     }
 
     private void displayResult()
