@@ -14,6 +14,5 @@
 Authors:
 
 1. [Abhishek Nishad](https://github.com/abhishek-nishad)
-2. Ishan Rajendra
-3. Aman Verma
-4. Ajay Kumar
+2. [Ishan Rajendra](https://github.com/ishan-samuel)
+
