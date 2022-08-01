@@ -13,7 +13,7 @@
 
 Authors:
 
-1. <a href "https://github.com/abhishek-nishad">Abhishek Nishad </a>
+1. [Abhishek Nishad](https://github.com/abhishek-nishad)
 2. Ishan Rajendra
 3. Aman Verma
 4. Ajay Kumar
