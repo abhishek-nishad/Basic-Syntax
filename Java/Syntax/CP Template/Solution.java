@@ -20,7 +20,7 @@ public class Solution
 
     public void solve() throws IOException
     {  
-       //write drive code here 
+       //write driver code here 
     }
 
 
