@@ -1,5 +1,8 @@
 import java.io.*;
 import java.util.*;
+
+// Create input.txt and output.txt in the same folder to use the template.
+
 public class Solution 
 {
     // ---------- CONSTANTS ----------
